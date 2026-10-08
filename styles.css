@@ -19,7 +19,8 @@ dialog{color:var(--ink);background:#12171e;border:1px solid #333b46;padding:2.75
 
 .car-stage,.car-art{mix-blend-mode:normal}.inline-model{background:transparent}
 
-.car-surface:focus-visible{outline:1px solid #ff784a66;outline-offset:4px}
+.car-surface:focus{outline:none}
+.car-surface:focus-visible:not(.is-pointer-focused){outline:1px solid #d5dde066;outline-offset:4px}
 
 /* A quiet showroom: diffuse wall light and a soft pool on the floor, under the car. */
 .stage-light{inset:-18% -18% -8%;background:radial-gradient(ellipse at 66% 36%,#c2cbcc12,transparent 55%),radial-gradient(ellipse at 47% 72%,#46525c55,transparent 62%);filter:blur(32px);pointer-events:none}
