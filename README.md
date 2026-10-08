@@ -1,5 +1,7 @@
 # Octane — Tokyo, Drift.
 
+[Ouvrir le site](https://ibrahimdotio.github.io/octane-tokyo-garage/)
+
 ## Déploiement
 
 La branche `main` contient les sources et la branche `gh-pages` contient uniquement le site compilé issu de `dist`. GitHub Pages publie automatiquement chaque mise à jour de `gh-pages`, avec la source réglée sur cette branche et le dossier `/`. Tous les chemins des assets restent relatifs, pour fonctionner sous l’URL du dépôt. Le code et les modèles 3D sont hébergés dans le dépôt, sans lecteur externe.
