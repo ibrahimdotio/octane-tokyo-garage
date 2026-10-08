@@ -1,0 +1,15 @@
+{
+  "name": "octane-tokyo-garage",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/car-experience.js --bundle --format=esm --target=es2022 --minify --outfile=dist/car-experience.js",
+    "publish:pages": "git subtree push --prefix dist origin gh-pages"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

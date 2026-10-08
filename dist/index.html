@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1014">
+  <meta name="description" content="Explore Tokyo by night with a local driver. Choose a Japanese icon and discover Octane's night rides.">
+  <title>Octane — Tokyo, Drift.</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%230c1014'/%3E%3Ccircle cx='20' cy='20' r='10' fill='none' stroke='%23ff784a' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/skyline-r34.webp" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="booking.css">
+  <script src="app.js" defer></script>
+  <script src="booking.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="header">
+      <a class="logo" href="./" aria-label="Octane home"><img src="assets/octane-logo.png" alt="Octane" width="800" height="135"></a>
+      <nav class="journey-progress" aria-label="Booking progress" hidden></nav>
+      <nav class="header-nav" aria-label="Main navigation">
+        <button type="button" class="text-button" id="how-button" data-i18n="how">How it works</button>
+        <span class="nav-divider" aria-hidden="true"></span>
+        <label class="language"><span class="sr-only" data-i18n="language">Language</span><select id="language"><option value="en">EN</option><option value="fr">FR</option></select><svg width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="m2 2 5.5 5.5L13 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></label>
+      </nav>
+    </header>
+
+    <main class="garage">
+      <section class="intro" aria-labelledby="hero-title">
+        <p class="step"><span>01</span><span class="step-line" aria-hidden="true"></span><span data-i18n="step">Choose your car</span><span class="step-total">/ 04</span></p>
+        <h1 id="hero-title"><span>TOKYO,</span><span>DRIFT.</span></h1>
+        <p class="description" data-i18n="description">Explore Tokyo by night<br>with a local driver.</p>
+        <div class="booking">
+          <p class="price"><span class="price-prefix" data-i18n="from">From</span><span class="price-value">¥25,000</span><span class="price-unit" data-i18n="perPerson">per person</span></p>
+          <a class="primary-button" id="route-link" href="#routes" data-i18n="chooseRoute">Choose your route</a>
+        </div>
+      </section>
+
+      <section class="car-stage" aria-label="Selected car">
+        <div class="stage-light" aria-hidden="true"></div>
+        <div class="car-art" id="car-art">
+          <div class="showroom-floor" aria-hidden="true"></div>
+          <img id="hero-car" src="assets/skyline-r34.webp" alt="Pearl white Nissan Skyline R34, front three-quarter view" width="1727" height="911" fetchpriority="high" decoding="async" draggable="false">
+          <div id="car-3d" class="car-3d" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section class="car-details" aria-labelledby="car-title">
+        <div class="car-caption"><h2 id="car-title">Nissan Skyline R34</h2><span class="rotate-hint" id="rotate-hint" hidden><svg width="28" height="16" viewBox="0 0 28 16" fill="none" aria-hidden="true"><path d="M5 8h18M8 4 4 8l4 4M20 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"/></svg><span data-i18n="rotate">Drag to rotate</span></span></div>
+        <dl class="car-specs">
+          <div><dt data-i18n="engine">Engine</dt><dd id="spec-engine">RB26DETT</dd></div>
+          <div><dt data-i18n="displacement">Displacement</dt><dd id="spec-displacement">2,568 cc</dd></div>
+          <div><dt data-i18n="power">Power</dt><dd id="spec-power">280 PS</dd></div>
+          <div><dt data-i18n="drivetrain">Drivetrain</dt><dd id="spec-drivetrain">All-wheel drive</dd></div>
+        </dl>
+        <p class="spec-reference"><a id="spec-source" href="https://www.nissan-global.com/EN/HERITAGE_COLLECTION/280_skyline_gt-r_v-spec_ii.html" target="_blank" rel="noopener"><span data-i18n="factorySpecs">Factory specs</span> · <span id="spec-reference-model">2000 V·spec II</span><svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 8 8 2M3 2h5v5" stroke="currentColor"/></svg></a></p>
+      </section>
+
+      <aside class="car-rail" aria-label="Choose your car">
+        <div class="car-options" role="group" aria-label="Car selection">
+          <button class="car-option is-selected" type="button" data-car="r34" aria-pressed="true"><span class="car-option-image"><img src="assets/skyline-r34.webp" alt="" width="1727" height="911"><span class="selected-mark" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 16 16"><path d="m3 8 3 3 7-7" fill="none" stroke="currentColor" stroke-width="2"/></svg></span></span><span>Skyline R34</span></button>
+          <button class="car-option" type="button" data-car="r35" aria-pressed="false"><span class="car-option-image"><img src="assets/gtr-r35.webp" alt="" width="1584" height="993"></span><span>GT-R R35</span></button>
+          <button class="car-option" type="button" data-car="supra" aria-pressed="false"><span class="car-option-image"><img src="assets/supra.webp" alt="" width="1734" height="907"></span><span>Toyota Supra</span></button>
+          <button class="car-option" type="button" data-car="ae86" aria-pressed="false"><span class="car-option-image"><img src="assets/ae86.webp" alt="" width="1586" height="992"></span><span>Toyota AE86</span></button>
+        </div>
+      </aside>
+      <p class="sr-only" id="selection-status" aria-live="polite">Nissan Skyline R34 selected</p>
+    </main>
+
+    <main id="journey" hidden></main>
+
+    <footer class="footer"><span class="footer-location"><span class="location-mark" aria-hidden="true"></span>TOKYO, JAPAN <span class="local-time" id="local-time"></span></span><div><a href="https://www.instagram.com/octane_tokyo/" target="_blank" rel="noopener">Instagram</a><a href="mailto:contact@octane-team.com" data-i18n="contact">Contact</a></div></footer>
+  </div>
+
+  <dialog id="how-dialog" class="info-dialog" aria-labelledby="how-title">
+    <button type="button" class="close-dialog" data-close="how-dialog" aria-label="Close"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="m4 4 12 12M16 4 4 16" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <span class="dialog-eyebrow">THE OCTANE EXPERIENCE</span>
+    <h2 id="how-title" data-i18n="howTitle">Your night, your way.</h2>
+    <ol class="how-steps"><li><span>01</span><div><h3 data-i18n="howCar">Choose an icon</h3><p data-i18n="howCarBody">Find the Japanese car that makes the night yours.</p></div></li><li><span>02</span><div><h3 data-i18n="howRoute">Find your route</h3><p data-i18n="howRouteBody">Discover Tokyo's roads, skyline and car culture with a local host.</p></div></li><li><span>03</span><div><h3 data-i18n="howBook">Book your night</h3><p data-i18n="howBookBody">See the current experiences, available dates and booking details on Octane.</p></div></li></ol>
+    <a class="primary-button" href="#routes" data-i18n="viewExperiences">View experiences</a>
+    <p class="model-credit"><a href="https://sketchfab.com/3d-models/nissan-skyline-r34-gt-r-ff8fb2251dfa4bb9979e7022c5a6666c" target="_blank" rel="noopener" title="Paint and wheel finishes adapted for Octane">R34: Lexyc16 · CC BY</a></p>
+    <p class="model-credit"><a href="assets/models/CREDITS.txt" target="_blank" rel="noopener">Fleet model credits</a></p>
+  </dialog>
+
+</body>
+</html>

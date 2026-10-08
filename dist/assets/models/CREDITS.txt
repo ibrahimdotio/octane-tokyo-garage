@@ -1,0 +1,32 @@
+Nissan Skyline R34 GT-R
+Author: Lexyc16 (https://sketchfab.com/Lexyc16)
+Source: https://sketchfab.com/3d-models/nissan-skyline-r34-gt-r-ff8fb2251dfa4bb9979e7022c5a6666c
+License: Creative Commons Attribution 4.0, https://creativecommons.org/licenses/by/4.0/
+Changes: paint and wheel finishes, lighting, scale and presentation adapted for Octane.
+Downloaded from the public Objaverse distribution:
+https://huggingface.co/datasets/allenai/objaverse/blob/main/glbs/000-126/ff8fb2251dfa4bb9979e7022c5a6666c.glb
+Objaverse dataset: https://objaverse.allenai.org/ (ODC-By 1.0).
+
+
+Custom 2017 Nissan GTR
+Author: Socksthecat (https://sketchfab.com/Socksthecat)
+Source: https://sketchfab.com/3d-models/custom-2017-nissan-gtr-a79151120b524854a958ce46a3b064a8
+License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Changes: paint and wheel finishes, lighting, scale and presentation adapted for Octane.
+File obtained from the public Objaverse distribution; original licensing retained.
+
+
+Toyota GR Supra
+Author: 3dmodels.cars (https://sketchfab.com/3dcarsmodels), formerly Rtag63 (https://sketchfab.com/Rtag63)
+Source: https://sketchfab.com/3d-models/toyota-gr-supra-86f609515557438e93bd3c6145ef99ca
+License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Changes: welded duplicate vertices, simplified geometry with Meshoptimizer (ratio 0.48, relative error limit 0.0005), deduplicated and pruned unused data while preserving smooth normals and named materials. Paint, wheels, lighting, scale and presentation adapted for Octane.
+File obtained from the public Objaverse distribution; original licensing retained.
+
+
+Toyota Corolla AE86 Trueno
+Author: Lexyc16 (https://sketchfab.com/Lexyc16)
+Source: https://sketchfab.com/3d-models/toyota-corolla-ae86-trueno-fe02fba6302e450ea8424591493341ea
+License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+Changes: paint, window finish, lighting, scale and presentation adapted for Octane.
+File obtained from the public Objaverse distribution; original licensing retained.
