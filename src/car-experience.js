@@ -48,7 +48,8 @@ export async function createCarExperience({host,photo,hint,reducedMotion,isActiv
   surface.addEventListener('pointerdown',event=>{
     if(!active||!revealed||event.button!==0)return;
     baseAngle=actualAngle;hoverAngle=0;drag={id:event.pointerId,x:event.clientX,angle:baseAngle};
-    surface.setPointerCapture(event.pointerId);surface.classList.add('is-dragging');surface.focus({preventScroll:true});
+    // Keep pointer focus for keyboard controls without drawing a focus ring during rotation.
+    surface.setPointerCapture(event.pointerId);surface.classList.add('is-dragging','is-pointer-focused');surface.focus({preventScroll:true});
   });
   surface.addEventListener('pointermove',event=>{
     if(!active||!revealed)return;
@@ -60,7 +61,9 @@ export async function createCarExperience({host,photo,hint,reducedMotion,isActiv
   surface.addEventListener('pointerleave',()=>{if(!drag){hoverAngle=0;wake();}});
   surface.addEventListener('pointerup',endDrag);surface.addEventListener('pointercancel',endDrag);
   surface.addEventListener('lostpointercapture',()=>{if(drag)endDrag({pointerId:drag.id});});
+  surface.addEventListener('blur',()=>surface.classList.remove('is-pointer-focused'));
   surface.addEventListener('keydown',event=>{
+    surface.classList.remove('is-pointer-focused');
     if(!revealed||!active||!['ArrowLeft','ArrowRight','Home'].includes(event.key))return;
     event.preventDefault();baseAngle=event.key==='Home'?0:baseAngle+(event.key==='ArrowLeft'?1:-1)*Math.PI/18;
     hoverAngle=0;entry.angle=baseAngle;updateAria();wake();
